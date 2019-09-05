@@ -3,7 +3,9 @@
 }
 
 body{
-    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SM3pJjTqisbn4nt8/world-map-background-cities-connections-4k-there-are-also-animated-glowing-round-connections-in-different-cities-on-the-map_r7c7qqkc_thumbnail-full01.png")
+    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SM3pJjTqisbn4nt8/world-map-background-cities-connections-4k-there-are-also-animated-glowing-round-connections-in-different-cities-on-the-map_r7c7qqkc_thumbnail-full01.png");
+    // opacity: 0.5;
+    // background-color:rgba(248, 242, 242, 0.7);
 }
 
 .form-container{
@@ -15,4 +17,24 @@ body{
     -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
     box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
 
+}
+
+.map{
+    background: rgba(255, 255, 255, 0.26);
+    display: flex;
+    justify-content: space-between;
+    // margin-top: 10rem;
+    padding: 2rem;
+    border: black 2px solid;
+    width: 100rem;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+.style{
+    height: 60rem;
+    width: 50rem;
+    float: right;
+    border:white 3px solid;
+    display: inherit;
 }
