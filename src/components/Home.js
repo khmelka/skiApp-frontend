@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Map from './Map'
+import Map from './Map';
 
 export default class Home extends Component {
     render() {
