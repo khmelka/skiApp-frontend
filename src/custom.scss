@@ -1,12 +1,13 @@
-.signinMainContainer{
+.signinMainContainer {
     // text-align: center;
 }
 
-body{
-    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SM3pJjTqisbn4nt8/world-map-background-cities-connections-4k-there-are-also-animated-glowing-round-connections-in-different-cities-on-the-map_r7c7qqkc_thumbnail-full01.png")
+body {
+    // background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SM3pJjTqisbn4nt8/world-map-background-cities-connections-4k-there-are-also-animated-glowing-round-connections-in-different-cities-on-the-map_r7c7qqkc_thumbnail-full01.png");
+    background-color:rgba(248, 206, 206, 0.7);
 }
 
-.form-container{
+.form-container {
     // border: 1px solid white;
     color: white;
     padding: 50px 60px;
@@ -15,4 +16,25 @@ body{
     -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
     box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
 
+}
+
+.map {
+    background: rgba(255, 255, 255, 0.26);
+    display: flex;
+    justify-content: space-between;
+    // margin-top: 10rem;
+    padding: 2rem;
+    border: black 2px solid;
+    width: 100rem;
+    margin: auto;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.style {
+    height: 60rem;
+    width: 95rem;
+    
+    border:white 3px solid;
+    display: block;
 }

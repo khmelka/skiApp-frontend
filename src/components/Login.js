@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -89,7 +89,7 @@ export default class Login extends Component {
                                     <input type="password" className="form-control" placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange}/>
                                     </div>
                                 
-                                <button type="submit" className="btn btn-success btn-success" id="but1">Login</button>
+                                <button type="submit" className="btn btn-success btn-success" id="but1"><Link to="/home">Login</Link></button>
                                 <button type="submit" className="btn btn-success btn-success"id="but2"><Link to="/">Signup</Link></button>
 
                                 </form>
