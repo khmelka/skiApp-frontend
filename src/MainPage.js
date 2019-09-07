@@ -8,6 +8,8 @@ export class MainPage extends Component {
     render() {
 
         return (
+            
+           
             <Router>
               <div>
                     <Route path="/login" component={Login} >
@@ -21,6 +23,7 @@ export class MainPage extends Component {
                     </Route>
               </div>
             </Router>
+         
         )
     }
 }
