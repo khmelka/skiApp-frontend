@@ -2,10 +2,16 @@ import React, { useState } from 'react'
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from 'react-google-maps'
 import {BrowserRouter as Link} from 'react-router-dom'
 import * as tennisCourts from './tennisCourtsJSON.json'
+import Calendar from './Calendar'
+
 
 
 function GMap() {
     const [selectedCourt, setSlectedCourt] = useState(null)
+    const [showCalendar, setShowCalendar] = useState(false)
+ console.log("hiiii", showCalendar)
+
+
             return (
                 <GoogleMap defaultZoom={12} defaultCenter={{lat: 39.739235, lng: -104.990250 }} 
                   >
@@ -30,6 +36,7 @@ function GMap() {
                 ))}
 
                     {selectedCourt && (
+                        <div>
                         <InfoWindow
                                 position={{
                                     lat: selectedCourt.Latitude,
@@ -44,13 +51,19 @@ function GMap() {
                                     <p>{selectedCourt.name}</p>
                                     <p>{selectedCourt.address}</p>
                                     <p><img src={selectedCourt.tennisCourts_courtIcon} /> {selectedCourt.numberOfCourts}</p>
-                                    <button type="submit" className="btn btn-success btn-success" id="but1"><Link to="/home">Book Time</Link></button>
-                            
+                                    <button type="submit" className="btn btn-success btn-success" onClick={()=>setShowCalendar(true)} id="but1">Book</button>
+                                    {showCalendar
+                                        ? <Calendar />
+                                        : null}
+                                    
                                  </div>
                       
                         </InfoWindow>
-                    )}
+                        
+                        
+                        </div>
 
+                    )}
                 </GoogleMap>
                 
         )
@@ -78,4 +91,3 @@ export default function Map() {
         </div>
     )
 }
-
