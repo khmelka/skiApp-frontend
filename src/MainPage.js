@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 import Login from './components/Login'
 import Signup from './components/Signup'
-import Home from './components/Home'
+import Map from './components/Map'
 
 export class MainPage extends Component {
     render() {
 
         return (
             
-           
+          
             <Router>
               <div>
                     <Route path="/login" component={Login} >
@@ -19,11 +19,14 @@ export class MainPage extends Component {
 
                     </Route>
 
-                    <Route exact path="/home" component={Home}>
+                    <Route exact path="/map" component={Map}>
                     </Route>
+                    
               </div>
+             
             </Router>
-         
+           
+           
         )
     }
 }

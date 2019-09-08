@@ -1,13 +1,15 @@
-import React, { Component } from 'react'
-import Map from './Map';
+import React from 'react'
+import * as skiresorts from './skiresorts.json'
 
-export default class Home extends Component {
-    render() {
 
+export default function Home() {
+
+   
+        
         return (
-            <div>
-               <Map />
+            <div className="homeContainer">
+              <h1>HELOOOOO</h1>
             </div>
         )
     }
-}
+

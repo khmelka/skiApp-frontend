@@ -1,61 +1,64 @@
 import React, { useState } from 'react'
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from 'react-google-maps'
 import {BrowserRouter as Link} from 'react-router-dom'
-import * as tennisCourts from './tennisCourtsJSON.json'
-import Calendar from './Calendar'
-
+import * as skiresorts from './skiresorts.json'
+import Rating from './Rating'
+import Heart from './Heart'
+import Home from './Home'
 
 
 function GMap() {
-    const [selectedCourt, setSlectedCourt] = useState(null)
-    const [showCalendar, setShowCalendar] = useState(false)
- console.log("hiiii", showCalendar)
+    const [selectedResort, setSelectedResort] = useState(null)
 
 
             return (
-                <GoogleMap defaultZoom={12} defaultCenter={{lat: 39.739235, lng: -104.990250 }} 
+                <div>
+                    <div>
+                <Home />
+                </div>
+                <GoogleMap defaultZoom={7.5} defaultCenter={{lat: 39.739235, lng: -104.990250 }} 
                   >
                 
-                {tennisCourts.tennisCourts.map((court) => (
+                {skiresorts.skiresorts.map((resort) => (
                     <Marker 
-                      key={court.tennisCourts} 
+                      key={resort.skiresorts} 
                       position={{
-                          lat: court.Latitude,
-                          lng: court.Longitude
+                          lat: resort.latitude,
+                          lng: resort.longitude
 
                       }}
 
                       onClick={() => {
-                          setSlectedCourt(court)
+                          setSelectedResort(resort)
                       }}
                       icon={{
-                      url: './iconfinder_Tennis_Ball_22985.png',
-                      scaledSize: new window.google.maps.Size(32, 32)
+                      url: './ski.png',
+                      scaledSize: new window.google.maps.Size(32, 32),
                       }}
                     />
                 ))}
 
-                    {selectedCourt && (
+                    {selectedResort && (
                         <div>
                         <InfoWindow
                                 position={{
-                                    lat: selectedCourt.Latitude,
-                                    lng: selectedCourt.Longitude
+                                    lat: selectedResort.latitude,
+                                    lng: selectedResort.longitude
                                 }}
 
                                 onCloseClick={() => {
-                                    setSlectedCourt(null)
+                                    setSelectedResort(null)
                                 }}
                             >
                                 <div>
-                                    <p>{selectedCourt.name}</p>
-                                    <p>{selectedCourt.address}</p>
-                                    <p><img src={selectedCourt.tennisCourts_courtIcon} /> {selectedCourt.numberOfCourts}</p>
-                                    <button type="submit" className="btn btn-success btn-success" onClick={()=>setShowCalendar(true)} id="but1">Book</button>
-                                    {showCalendar
-                                        ? <Calendar />
-                                        : null}
-                                    
+                                    <img src={selectedResort.logo} id="logo" /> 
+                                    <p><b>{selectedResort.name}</b></p>
+                                    <p>Annual Snowfall: {selectedResort.annualsnow}</p>
+                                    <p>PAF Score: {selectedResort.score}%</p>
+                                    <p>Number of Lifts: {selectedResort.lifts}</p>
+                                    <Rating />
+                                  
+
                                  </div>
                       
                         </InfoWindow>
@@ -66,7 +69,10 @@ function GMap() {
                     )}
                 </GoogleMap>
                 
+             
+            </div>  
         )
+        
     }
 
 const WrappedMap = withScriptjs(withGoogleMap(GMap))
@@ -79,7 +85,7 @@ export default function Map() {
         
         <div className="map">
           
-            
+                
                 <WrappedMap
                     googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places'} 
                     loadingElement={<div style={{height: "100%"}} />}

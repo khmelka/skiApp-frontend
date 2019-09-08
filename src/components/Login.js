@@ -89,7 +89,7 @@ export default class Login extends Component {
                                     <input type="password" className="form-control" placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange}/>
                                     </div>
                                 
-                                <button type="submit" className="btn btn-success btn-success" id="but1"><Link to="/home">Login</Link></button>
+                                <button type="submit" className="btn btn-success btn-success" id="but1"><Link to="/map">Login</Link></button>
                                 <button type="submit" className="btn btn-success btn-success"id="but2"><Link to="/">Signup</Link></button>
 
                                 </form>
