@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 import * as skiresorts from './skiresorts.json'
 
 
-export default function Home() {
+export class Home extends Component {
+  render() {
+    return (
+     <div>
+       {this.props.resort}
+     </div>
+    )
+  }
+}
 
-   
-        
-        return (
-            <div className="homeContainer">
-              <h1>HELOOOOO</h1>
-            </div>
-        )
-    }
+export default Home
 

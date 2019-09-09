@@ -27,18 +27,18 @@ body {
     border: yellow 5px solid;
     // width: 100rem;
     // margin: auto;
-    // margin-top: 10rem;
     float: right;
     height: 100vh;
     // width: 100vh;
+    margin-left: auto;
 }
 
 .style {
     // height: 100vh;
     width: 90rem;
-    
-    border:rgb(235, 58, 58) 3px solid;
-    display: block;
+    // float: right;
+    // border:rgb(235, 58, 58) 3px solid;
+    // display: block;
 }
 
 #logo{
@@ -48,4 +48,11 @@ body {
 
 .homeContainer{
     border: blue 2px solid;
+    margin: auto;
 }
+
+// .homeMap{
+//     justify-content: space-between;
+//     border: black;
+   
+// }

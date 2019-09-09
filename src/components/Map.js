@@ -12,10 +12,10 @@ function GMap() {
 
 
             return (
-                <div>
-                    <div>
-                <Home />
-                </div>
+                
+                
+               
+                <div>   
                 <GoogleMap defaultZoom={7.5} defaultCenter={{lat: 39.739235, lng: -104.990250 }} 
                   >
                 
@@ -27,6 +27,8 @@ function GMap() {
                           lng: resort.longitude
 
                       }}
+                      
+
 
                       onClick={() => {
                           setSelectedResort(resort)
@@ -37,7 +39,9 @@ function GMap() {
                       }}
                     />
                 ))}
+                    
 
+                   
                     {selectedResort && (
                         <div>
                         <InfoWindow
@@ -69,8 +73,15 @@ function GMap() {
                     )}
                 </GoogleMap>
                 
-             
-            </div>  
+                <div>
+                    {skiresorts.skiresorts.map((resort)=> {
+                        return <Home resort={resort.name} />
+                    })}
+                
+                </div>
+               
+                </div> 
+            
         )
         
     }
@@ -85,7 +96,7 @@ export default function Map() {
         
         <div className="map">
           
-                
+         
                 <WrappedMap
                     googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places'} 
                     loadingElement={<div style={{height: "100%"}} />}
