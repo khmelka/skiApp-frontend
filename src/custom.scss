@@ -3,34 +3,86 @@
 }
 
 body {
-    // background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SM3pJjTqisbn4nt8/world-map-background-cities-connections-4k-there-are-also-animated-glowing-round-connections-in-different-cities-on-the-map_r7c7qqkc_thumbnail-full01.png");
-    background-color:rgba(248, 206, 206, 0.7);
+    background-image: url("https://wallpapercave.com/wp/rtMojAI.jpg");
+    // background-color:rgba(248, 206, 206, 0.7);
 }
 
 .form-container {
     // border: 1px solid white;
-    color: white;
+    color: rgb(255, 251, 251);
     padding: 50px 60px;
     margin-top: 25vh;
     -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
     box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+    background: rgba(77, 77, 163, 0.253);
+}
 
+//buttons
+.btn.btn-success.btn-success{
+    // background: white;
+    background-color: white;
+    color: black;
+}
+
+.btn.btn-info {
+    color:white;
+    background-color: white;
+}
+
+//navbar
+
+.navbar.navbar.navbar-light.bg-transparent.mt-1{
+    background-color: #ffffff;
+    height: 2rem;
+    // border: rgb(255, 255, 255) 3px solid;
+    display: flex;
+    margin-bottom: 0;
+}
+.navbar-brand{
+    float: right;
+    color: blue;
+    // font
+}
+
+//resort list
+.list-group{
+    display: grid;
+}
+
+.list-group-item.d-flex.justify-content-between.align-items-center{
+    background: rgba(107, 144, 246, 0.342);
+    height: 100;
+    color: white;
+    font-size: 1.6rem;
+}
+
+#img{
+    width: 5rem
+    // padding-righmar: 2rem;
+}
+
+.text{
+    float: right;
 }
 
 .map {
     background: rgba(255, 255, 255, 0.26);
     display: flex;
     // justify-content: space-between;
-    // margin-top: 10rem;
+    // margin-top: -7.3rem;
     // padding: 2rem;
-    border: yellow 5px solid;
+    border: rgb(255, 255, 255) 3px solid;
     // width: 100rem;
     // margin: auto;
     float: right;
     height: 100vh;
     // width: 100vh;
     margin-left: auto;
+    margin: 6rem;
+    -webkit-box-shadow: -1px 4px 26px 11px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: -1px 4px 26px 11px rgba(255, 255, 255, 0.75);
+    box-shadow: -1px 4px 26px 11px rgba(255, 255, 255, 0.75);
 }
 
 .style {

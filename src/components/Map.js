@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from 'react-google-maps'
-import {BrowserRouter as Link} from 'react-router-dom'
 import * as skiresorts from './skiresorts.json'
 import Rating from './Rating'
 import Heart from './Heart'
@@ -69,16 +68,12 @@ function GMap() {
                         
                         
                         </div>
-
+    
                     )}
+                    
                 </GoogleMap>
                 
-                <div>
-                    {skiresorts.skiresorts.map((resort)=> {
-                        return <Home resort={resort.name} />
-                    })}
                 
-                </div>
                
                 </div> 
             
@@ -96,7 +91,7 @@ export default function Map() {
         
         <div className="map">
           
-         
+          
                 <WrappedMap
                     googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places'} 
                     loadingElement={<div style={{height: "100%"}} />}

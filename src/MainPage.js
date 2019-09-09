@@ -4,6 +4,7 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import Map from './components/Map'
 import Test from './components/Test'
+import Home from './components/Home'
 
 export class MainPage extends Component {
     render() {
@@ -12,7 +13,7 @@ export class MainPage extends Component {
             
           
             <Router>
-              <div>
+              
                     <Route path="/login" component={Login} >
 
                     </Route>
@@ -20,10 +21,11 @@ export class MainPage extends Component {
 
                     </Route>
 
-                    <Route exact path="/map" component={Map}>
-                    </Route>
+                    {/* <Route path="/map" component={Test}>
+                    </Route> */}
                     
-              </div>
+                    <Route path="/home" component={Test} />
+                {/* <Route path="/favorites" component={Favorites} /> */}
              
             </Router>
            
