@@ -1,20 +1,30 @@
 import React, { Component } from 'react'
-import * as skiresorts from './skiresorts.json'
+import { allResolved } from 'q';
+
 
 
 export class Home extends Component {
   render() {
+    // console.log("NOOOO", this.props.resort)
+    
     return (
-      <div>
+    
+    
+            <div  onClick={() => {
+              console.log("great", this.props.resort)
+              this.props.setSelectedResort(this.props.resort)
+          }}>
+    
+        
          
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-             
-             
-
-              <p> <img src={this.props.logo} id="img"/> {this.props.resort}</p>
-                </li>
-           
-         </div>
+         
+         <a href="#" class="list-group-item list-group-item-action">
+            <p> <img src={this.props.logo} id="img"/> {this.props.resortname} </p>
+                </a>
+        
+        
+                
+     </div>
     )
   }
 }

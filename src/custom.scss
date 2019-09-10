@@ -50,11 +50,15 @@ body {
     display: grid;
 }
 
-.list-group-item.d-flex.justify-content-between.align-items-center{
+.list-group-item.list-group-item-action{
     background: rgba(107, 144, 246, 0.342);
     height: 100;
     color: white;
     font-size: 1.6rem;
+}
+a.list-group-item.list-group-item-action:hover{
+background-color: rgba(53, 65, 226, 0.205);
+color: white;
 }
 
 #img{
