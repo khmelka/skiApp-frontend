@@ -48,6 +48,7 @@ body {
 //resort list
 .list-group{
     display: grid;
+    display: inline-block;
 }
 
 .list-group-item.list-group-item-action{
@@ -70,31 +71,27 @@ color: white;
     float: right;
 }
 
-.map {
-    background: rgba(255, 255, 255, 0.26);
-    display: flex;
-    // justify-content: space-between;
-    // margin-top: -7.3rem;
-    // padding: 2rem;
-    border: rgb(255, 255, 255) 3px solid;
-    // width: 100rem;
-    // margin: auto;
+//map
+.map{
+    margin: auto;
+    padding-bottom: 40rem;
+}
+
+.style {
+    height: 90rem;
+    width: 80em;
     float: right;
-    height: 100vh;
-    // width: 100vh;
-    margin-left: auto;
-    margin: 6rem;
+    border:rgb(255, 255, 255) 7px solid;
+    display: block;
     -webkit-box-shadow: -1px 4px 26px 11px rgba(255, 255, 255, 0.75);
     -moz-box-shadow: -1px 4px 26px 11px rgba(255, 255, 255, 0.75);
     box-shadow: -1px 4px 26px 11px rgba(255, 255, 255, 0.75);
 }
 
-.style {
-    // height: 100vh;
-    width: 90rem;
-    // float: right;
-    // border:rgb(235, 58, 58) 3px solid;
-    // display: block;
+.home{
+    display: flex;
+    justify-content: space-between;
+
 }
 
 #logo{

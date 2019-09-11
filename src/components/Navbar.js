@@ -7,23 +7,24 @@ import Login from './Login';
 
 export default class Navbar extends Component {
     
-    handleClick =event => {
-        // console.log("no", this.props)
-        this.props.setShowFavs(true)
-    }
+    // handleClick =event => {
+    //     // console.log("no", this.props)
+    //     this.props.setShowFavs(true)
+    // }
 
     render() {
         return (
+            
             <div className='navbar navbar-light bg-transparent mt-1'>
                 <div>
-                    <button>Home</button>
-                </div>
-                  <button onClick={this.handleClick} >Favs</button>
-                    
-                    <div className="text">
-                        <Link className="link" to="/login"> <p className="navbar-brand">Sign Out</p></Link>
+                    <Link className="link" to="/home"> <p className="navbar-brand">Home</p></Link>
+                    {/* <div class="collapse navbar-collapse" id="navbarText"> */}
+                    <Link className="link" to="/favorites"> <p className="navbar-brand">Favorites</p></Link>
                     </div>
-          </div>
+                    <div className="text">
+                    <Link className="link" to="/login"> <p className="navbar-brand">Sign Out</p></Link>
+                    </div>
+              </div>
            
         
         )

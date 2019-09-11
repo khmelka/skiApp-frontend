@@ -5,6 +5,7 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import Map from './components/Map'
 import Favorites from './components/Favorites'
+import MainPage from './MainPage'
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
 
               
               
-              <Route path="/home" component={Map} /> 
+              <Route path="/home" component={MainPage} /> 
               {/* <Route path="/favorites" component={Favorites} /> */}
        
       </Router>

@@ -1,31 +1,32 @@
-import React, { Component } from 'react'
+import React, {useState, Component } from 'react'
+import Navbar from './Navbar'
 
 
 
-export class Home extends Component {
-  render() {
+function Home(props) {
+
     // console.log("NOOOO", this.props.resort)
     
     return (
     
     
             <div  onClick={() => {
-              console.log("great", this.props.resort)
-              this.props.setSelectedResort(this.props.resort)
+              console.log("great", props.resort)
+              props.setSelectedResort(props.resort)
           }}>
     
         
          
          
          <a href="#" class="list-group-item list-group-item-action">
-            <p> <img src={this.props.logo} id="img"/> {this.props.resortname} </p>
+            <p> <img src={props.logo} id="img"/> {props.resortname} </p>
                 </a>
         
         
                 
      </div>
     )
-  }
+  
 }
 
 export default Home

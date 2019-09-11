@@ -2,18 +2,18 @@ import React, { Component } from 'react'
 import Map from './Map'
 import Navbar from './Navbar'
 
-export class Favorites extends Component {
+function Favorites(props) {
 
-    render() {
-        console.log("favs", this.props.resortname)
+   
+        // console.log("favs", this.props.resortname)
         return (
             <div>
                 <a href="#" class="list-group-item list-group-item-action">
-                    <p> <img src={this.props.logo} id="img"/> {this.props.resortname}  </p>
+                    <p> <img src={props.logo} id="img"/> {props.resortname}  </p>
                 </a>
              </div>
         )
-    }
+    
 }
 
 export default Favorites
