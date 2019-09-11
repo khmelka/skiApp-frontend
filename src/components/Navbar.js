@@ -7,16 +7,18 @@ import Login from './Login';
 
 export default class Navbar extends Component {
     
+    handleClick =event => {
+        // console.log("no", this.props)
+        this.props.setShowFavs(true)
+    }
 
     render() {
         return (
             <div className='navbar navbar-light bg-transparent mt-1'>
                 <div>
-                    <Link className="link" to="/home"> <p className="navbar-brand">Home</p></Link>
+                    <button>Home</button>
                 </div>
-                   <div>
-                       <Link className="link" to="/favorites"> <p className="navbar-brand">Favorites</p></Link>
-                    </div>
+                  <button onClick={this.handleClick} >Favs</button>
                     
                     <div className="text">
                         <Link className="link" to="/login"> <p className="navbar-brand">Sign Out</p></Link>

@@ -7,13 +7,15 @@ import axios from 'axios'
 import Navbar from './Navbar';
 import Test from './Test'
 import Favorites from './Favorites';
-
+import FavContainer from './FavContainer';
+import HomeContainer from './HomeContainer'
 
 
 function GMap(props) {
     const [selectedResort, setSelectedResort] = useState(null)
     const [resorts, setResort] = useState([])
     const [favs, setFavs] = useState([])
+    const [showFavs, setShowFavs] = useState(false)
 
             useEffect(() => {
                 axios
@@ -37,8 +39,9 @@ function GMap(props) {
 
             return (
                 
-            
+                
                 <div>
+                <Navbar setShowFavs={setShowFavs}  />
                 <GoogleMap defaultZoom={7.5} defaultCenter={{lat: 39.739235, lng: -104.990250 }} 
                   >
                 
@@ -100,20 +103,22 @@ function GMap(props) {
                 </GoogleMap>
                 
                      
-                     <ul class="list-group">
+                     {/* <ul class="list-group">
                       {resorts.map((resort)=> {
                              return  <Home resort={resort} setSelectedResort={setSelectedResort} resortname={resort.resortname} logo={resort.logo} score={resort.score} latitude={resort.latitude} longitude={resort.longitude}/>   
                          })}
-                     </ul>
+                     </ul> */}
 
-                     <ul class="list-group">
+
+                     {/* <ul class="list-group">
                       {favs.map((fav)=> {
-                             return  <Favorites fav={fav} resortname={fav.resortname} logo={fav.logo}/>   
+                             return  <Favorites fav={fav} resortname={fav.resortname} logo={fav.logo} />   
                          })}
-                     </ul>
+                     </ul> */}
                 
-                
-               
+                {useState.showFavs=false   ? <FavContainer favs={favs}/> :
+                <HomeContainer resorts={resorts} setSelectedResort={setSelectedResort}/>}
+
                 </div> 
             
         )
@@ -133,6 +138,7 @@ export default function Map() {
           
           
                 <WrappedMap
+                
                     googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places'} 
                     loadingElement={<div style={{height: "100%"}} />}
                     containerElement={<div className="style" style={{ }} />}

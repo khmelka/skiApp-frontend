@@ -1,37 +1,37 @@
-import React, { Component } from 'react'
-import { BrowserRouter as Router, Route} from 'react-router-dom'
-import Login from './components/Login'
-import Signup from './components/Signup'
-import Map from './components/Map'
-import Test from './components/Test'
-import Home from './components/Home'
-import Favorites from './components/Favorites'
+// import React, { Component } from 'react'
+// import { BrowserRouter as Router, Route} from 'react-router-dom'
+// import Login from './components/Login'
+// import Signup from './components/Signup'
+// import Map from './components/Map'
+// import Test from './components/Test'
+// import Home from './components/Home'
+// import Favorites from './components/Favorites'
 
-export class MainPage extends Component {
-    render() {
+// export class MainPage extends Component {
+//     render() {
 
-        return (
+//         return (
             
           
-            <Router>
+//             <Router>
               
-                    <Route path="/login" component={Login} >
+//                     <Route path="/login" component={Login} >
 
-                    </Route>
-                    <Route exact path="/" component={Signup} >
+//                     </Route>
+//                     <Route exact path="/" component={Signup} >
 
-                    </Route>
+//                     </Route>
 
                     
                     
-                    <Route path="/home" component={Test} />
-                    <Route path="/favorites" component={Favorites} />
+//                     <Route path="/home" component={Map} />
+//                     <Route path="/favorites" component={Favorites} />
              
-            </Router>
+//             </Router>
            
            
-        )
-    }
-}
+//         )
+//     }
+// }
 
-export default MainPage
+// export default MainPage
