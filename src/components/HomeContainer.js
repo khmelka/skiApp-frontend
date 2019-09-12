@@ -4,7 +4,7 @@ import Home from './Home'
 export default function HomeContainer ({resorts, setSelectedResort}){
    
         return (
-            <div className="resorts">
+           
                 
                 <ul className="list-group">
                       {resorts.map((resort)=> {
@@ -12,7 +12,7 @@ export default function HomeContainer ({resorts, setSelectedResort}){
                          })}
                      </ul>
                
-            </div>
+         
         )
     
 }

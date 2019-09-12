@@ -68,22 +68,24 @@ export default class Login extends Component {
     render() {
         const {emailError, passwordError} = this.state
         return (
+        
+          
+
                 <div className="signinMainContainer">
                     <div className="row">
                         <div className="col-md-4 col-md-4 col-md-12"></div>
                         <div className="col-md-4 col-md-4 col-md-12">
-                            <form className="form-container" onSubmit={this.handleSubmit}>
-
-                              
-                                <div className="form-group">
+                         <form className="form-container" onSubmit={this.handleSubmit}>
+                            <div className="form-group">
+                                <div className="mainname">
+                                <h1 className="name">Welcome to SKi Buddy!</h1>
+                                </div>
                                     <label for="exampleInputEmail1">Email</label>
                                     <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={this.state.email} onChange={(event) => this.handleUserInput(event)}/>
                                     <div style={{ fontSize: 12, color: "red" }}>
                                         {emailError}
                                     </div>
                                  </div>
-                                
-
                                  <div className="form-group">
                                         <label>Password</label>
                                         <input type="password" className="form-control" placeholder="Password" name="password" value={this.state.password} onChange={(event) => this.handleUserInput(event)}/>
@@ -101,7 +103,8 @@ export default class Login extends Component {
                         </div>
                         <div className="col-md-4 col-md-4 col-md-12"></div>
                         </div>
-                    </div>
+                  </div>
+                
         
         )
     }

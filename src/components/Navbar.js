@@ -16,14 +16,15 @@ export default class Navbar extends Component {
         return (
             
             <div className='navbar navbar-light bg-transparent mt-1'>
-                <div>
-                    <Link className="link" to="/home"> <p className="navbar-brand">Home</p></Link>
+                <div className="text">
+                    {/* <Link className="link" to="/home"> <p className="navbar-brand">Home</p></Link> */}
+                    </div>
                     {/* <div class="collapse navbar-collapse" id="navbarText"> */}
-                    <Link className="link" to="/favorites"> <p className="navbar-brand">Favorites</p></Link>
-                    </div>
-                    <div className="text">
+                    {/* <Link className="link" to="/favorites"> <p className="navbar-brand">Favorites</p></Link> */}
+                    
+                    <div className="test">
                     <Link className="link" to="/login"> <p className="navbar-brand">Sign Out</p></Link>
-                    </div>
+                   </div>
               </div>
            
         

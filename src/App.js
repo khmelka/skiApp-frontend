@@ -29,12 +29,11 @@ class App extends Component {
       return (
         <div>
           <Router>
-          <Navbar />
               <Route path="/login" component={Login} />
                 <Route exact path="/" component={Signup} />
                 <Route path="/home" render={(...props) => <MainPage addFav={this.addFav}/>} /> 
                 <Route path="/favorites"  render={(...props) => <FavContainer favs={this.state.favs}/>}/>
-                
+            
             </Router>
         </div>
       );

@@ -1,6 +1,7 @@
 import React, {useState, useEffect, Component} from 'react'
 // import {Map, InfoWindow, Marker, GoogleApiWrapper, GoggleMap} from 'google-maps-react'
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from 'react-google-maps'
+// import { BrowserRouter as Link} from 'react-router-dom'
 
 import Rating from './Rating'
 import Heart from './Heart'
@@ -113,12 +114,12 @@ function GMap(props) {
                                             >
                                                 <div>
                                                     <img src={props.selectedResort.logo} id="logo" /> 
-                                                    <p><b>{props.selectedResort.resortname}</b></p>
+                                                    <p><b><a href={props.selectedResort.url}>{props.selectedResort.resortname}</a></b></p>
                                                     <p>Annual Snowfall: {props.selectedResort.annualsnow}</p>
                                                     <p>PAF Score: {props.selectedResort.score}%</p>
                                                     <p>Number of Lifts: {props.selectedResort.lifts}</p>
                                                     <Rating />
-                                                    <button type="submit" className="btn btn-info" id="but1" onClick={()=>props.addFav(props.selectedResort)} >Add to Favs</button> 
+                                                    {/* <button type="submit" className="btn btn-info" id="but1" onClick={()=>props.addFav(props.selectedResort)} >Add to Favs</button>  */}
                                                 
 
                                                 </div>

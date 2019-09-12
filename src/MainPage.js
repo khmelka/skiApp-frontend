@@ -41,13 +41,12 @@ export class MainPage extends Component {
         return (
             
             <div>
-                
+                <Navbar />
                 <div className="home">
                 <HomeContainer resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} />
                 <Map resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} selectedResort={this.state.selectedResort} favs={this.state.favs} addFav={this.props.addFav}/>
-        
                 </div>
-
+              
            </div>
         )
         

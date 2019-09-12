@@ -19,7 +19,7 @@ function Home(props) {
          
          
          <a href="#" class="list-group-item list-group-item-action">
-            <p> <img src={props.logo} id="img"/> {props.resortname} </p>
+            <p>  {props.resortname} </p>
                 </a>
         
         

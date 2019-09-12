@@ -1,5 +1,6 @@
 .signinMainContainer {
     // text-align: center;
+    margin-top: 15rem;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
     // border: 1px solid white;
     color: rgb(255, 251, 251);
     padding: 50px 60px;
-    margin-top: 25vh;
+    margin-top: 30px;
     -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
     box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
@@ -33,15 +34,20 @@ body {
 //navbar
 
 .navbar.navbar.navbar-light.bg-transparent.mt-1{
+
     background-color: #8981f33a;
     height: 2rem;
     // border: rgb(255, 255, 255) 3px solid;
-    display: flex;
+    // display: flex;
     margin-bottom: 0;
+    // display: flow-root;
+    display: inline-block;
+    float: right;
+    border: white 1px solid;
 }
 .navbar-brand{
-    float: right;
-    color: blue;
+    // float: right;
+    color: white;
     // font
 }
 
@@ -53,8 +59,8 @@ body {
 
 .list-group-item.list-group-item-action{
     background: rgba(107, 144, 246, 0.342);
-    height: 100;
-    color: white;
+    height: 42px;
+    color: rgb(255, 255, 255);
     font-size: 1.6rem;
 }
 a.list-group-item.list-group-item-action:hover{
@@ -67,25 +73,34 @@ color: white;
     // padding-righmar: 2rem;
 }
 
-.text{
+// 
+.test{
+    // margin: auto;
     float: right;
 }
 
 //map
 .map{
     margin: auto;
-    padding-bottom: 40rem;
+    // padding-bottom: 30rem;
 }
 
+// .map2{
+//     // margin: auto;
+//     // padding-bottom: 40rem;
+//     display: flex;
+//     padding-left: 30rem;
+// }
+
 .style {
-    height: 90rem;
+    height: 80rem;
     width: 80em;
     float: right;
     border:rgb(255, 255, 255) 3px solid;
     display: block;
-    -webkit-box-shadow: -1px 4px 26px 11px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: -1px 4px 26px 11px rgba(255, 255, 255, 0.75);
-    box-shadow: -1px 4px 26px 11px rgba(255, 255, 255, 0.75);
+    // -webkit-box-shadow: -1px 4px 26px 11px rgba(155, 170, 240, 0.75);
+    // -moz-box-shadow: -1px 4px 26px 11px rgba(155, 170, 240, 0.75);
+    // box-shadow: -1px 4px 26px 11px rgba(155, 170, 240, 0.75);
 }
 
 .home{
@@ -108,4 +123,24 @@ color: white;
 //     justify-content: space-between;
 //     border: black;
    
+// }
+
+.mainname{
+    float: center;
+    color: white;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+
+}
+
+.name { 
+    text-align: -webkit-center;
+    font-size: 3.8rem;
+
+    
+}
+
+// .form-group{
+//     argin-top: 1rem;
+//     margin-bottom: 10px;
 // }
