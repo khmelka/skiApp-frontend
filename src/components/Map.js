@@ -66,23 +66,13 @@ function GMap(props) {
     const [resorts, setResort] = useState([])
     // const [favs, setFavs] = useState([])
     const [showFavs, setShowFavs] = useState(false)
-
-           
-
-            // const addFav=(resort)=>{
-            //     // console.log("MAPS", resort)
-            //     console.log("lalal", props.setFavs)
-            //         if (!props.favs.includes(resort)){
-            //             props.setFavs([...props.favs, resort])
-            //         }
-            //     }
             
             console.log("props",props.addFav)
             return (
              
                 <div>
                     
-                            <GoogleMap defaultZoom={7.5} defaultCenter={{lat: 39.739235, lng: -104.990250 }} 
+                            <GoogleMap defaultZoom={8.5} defaultCenter={{lat: 39.739235, lng: -106.11 }} 
                             >
                             
                             {props.resorts.map((resort) => (
@@ -123,7 +113,7 @@ function GMap(props) {
                                             >
                                                 <div>
                                                     <img src={props.selectedResort.logo} id="logo" /> 
-                                                    <p><b>{props.selectedResort.name}</b></p>
+                                                    <p><b>{props.selectedResort.resortname}</b></p>
                                                     <p>Annual Snowfall: {props.selectedResort.annualsnow}</p>
                                                     <p>PAF Score: {props.selectedResort.score}%</p>
                                                     <p>Number of Lifts: {props.selectedResort.lifts}</p>
@@ -156,10 +146,11 @@ export default function Map(props) {
                     setSelectedResort={props.setSelectedResort}
                     favs={props.favs}
                     addFav={props.addFav}
-                    googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places'} 
+                    googleMapURL={'https://maps.googleapis.com/maps/api/js?key=AIzaSyA-LvuuR7H1uiMkRyqW1x4Bb2n9O2Fn_aU&v=3.exp&libraries=geometry,drawing,places'} 
                     loadingElement={<div style={{height: "100%"}} />}
                     containerElement={<div className="style" />}
                     mapElement={<div style={{ height: `100%` }} />}
+                    
                 />
         </div>
     )

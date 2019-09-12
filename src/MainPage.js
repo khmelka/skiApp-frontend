@@ -6,7 +6,7 @@ import Map from './components/Map'
 import Test from './components/Test'
 import Home from './components/Home'
 import Favorites from './components/Favorites'
-import NavBar from './components/Navbar'
+import Navbar from './components/Navbar'
 // import MapContainer from './components/Map';
 import HomeContainer from './components/HomeContainer';
 import FavContainer from './components/FavContainer'
@@ -15,7 +15,6 @@ export class MainPage extends Component {
 
     state = {
         resorts: [],
-        favs: [],
         selectedResort: null,
         activePage: "home"
     }
@@ -25,14 +24,6 @@ export class MainPage extends Component {
          selectedResort:resort
      })
     }
-
-    addFav=(resort)=> {
-        console.log("MAPS", resort)
-        console.log("lalal", this.state)
-            if (!this.state.favs.includes(resort)){
-               this.setState({favs: [...this.state.favs, resort]})
-            }
-        }
 
     componentDidMount(){
 
@@ -44,25 +35,19 @@ export class MainPage extends Component {
                 resorts
             })
           })
-        }
-       
-           
-    
+    }
 
     render() {
-
-        // console.log("yesss", this.state.resorts)
         return (
             
             <div>
-
-                <NavBar />
+                
                 <div className="home">
                 <HomeContainer resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} />
-                <Map resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} selectedResort={this.state.selectedResort} favs={this.state.favs} addFav={this.addFav}/>
-                <FavContainer favs={this.state.favs}/>
+                <Map resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} selectedResort={this.state.selectedResort} favs={this.state.favs} addFav={this.props.addFav}/>
+        
                 </div>
-                
+
            </div>
         )
         
