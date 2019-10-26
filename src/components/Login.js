@@ -78,7 +78,7 @@ export default class Login extends Component {
                          <form className="form-container" onSubmit={this.handleSubmit}>
                             <div className="form-group">
                                 <div className="mainname">
-                                <h1 className="name">Welcome to SKi Buddy!</h1>
+                                <h1 className="name">Welcome to Ski Buddy!</h1>
                                 </div>
                                     <label for="exampleInputEmail1">Email</label>
                                     <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={this.state.email} onChange={(event) => this.handleUserInput(event)}/>

@@ -3,30 +3,18 @@ import Navbar from './Navbar'
 
 
 
-function Home(props) {
-
-    // console.log("NOOOO", this.props.resort)
-    
+export default function Home(props) {
+    // console.log("resorts from home", props.resort)
     return (
-    
-    
-            <div  onClick={() => {
-              console.log("great", props.resort)
+        <div class="hi" onClick={() => {
               props.setSelectedResort(props.resort)
           }}>
-    
-        
-         
-         
-         <a href="#" class="list-group-item list-group-item-action">
-            <p>  {props.resortname} </p>
-                </a>
-        
-        
-                
-     </div>
+            <a href="#" className="list-group-item list-group-item-action">
+                <p className="resortname">  {props.resortname} </p>
+            </a>
+         </div>
     )
   
 }
 
-export default Home
+

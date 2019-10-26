@@ -7,7 +7,16 @@ body {
     background-image: url("https://wallpapercave.com/wp/rtMojAI.jpg");
     // background-color:rgba(248, 206, 206, 0.7);
 }
-
+.titleName{
+    display: contents;
+    color: white;
+    font-size: 18px;
+    padding-right: 2rem;
+}
+.favs {
+    // margin-top: -0.6rem;
+    color: white;
+}
 .form-container {
     // border: 1px solid white;
     color: rgb(255, 251, 251);
@@ -32,40 +41,50 @@ body {
 }
 
 //navbar
-
 .navbar.navbar.navbar-light.bg-transparent.mt-1{
-
     background-color: #8981f33a;
     height: 2rem;
     // border: rgb(255, 255, 255) 3px solid;
-    // display: flex;
+    display: flex;
     margin-bottom: 0;
-    // display: flow-root;
-    display: inline-block;
-    float: right;
     border: white 1px solid;
 }
 .navbar-brand{
     // float: right;
     color: white;
-    // font
+    // background-color: rgba(107, 144, 246, 0.692);
+    // padding-right: 2rem;
 }
+
+.navbar-end {
+    justify-content: flex-end !important;
+    margin-left: auto !important;
+    padding-right: 1.5rem;
+  }
 
 //resort list
 .list-group{
-    display: grid;
-    display: inline-block;
+    // height: 100vh;
+    // display: flex;
+
 }
 
 .list-group-item.list-group-item-action{
-    background: rgba(107, 144, 246, 0.342);
-    height: 42px;
+    background: rgba(107, 144, 246, 0.692);
     color: rgb(255, 255, 255);
     font-size: 1.6rem;
+    width: 350px;
+    display: flex;
+    height: 42.2px;
 }
 a.list-group-item.list-group-item-action:hover{
 background-color: rgba(53, 65, 226, 0.205);
 color: white;
+// margin-top: 0;
+}
+
+.resortname {
+    // margin-top: -0.7rem
 }
 
 #img{
@@ -80,24 +99,19 @@ color: white;
 }
 
 //map
+
 .map{
-    margin: auto;
-    // padding-bottom: 30rem;
+    // border: 2px green solid;
+    width: -webkit-fill-available;
+    height: 100vh;
 }
-
-// .map2{
-//     // margin: auto;
-//     // padding-bottom: 40rem;
-//     display: flex;
-//     padding-left: 30rem;
-// }
-
 .style {
-    height: 80rem;
-    width: 80em;
+    height: 100vh;
+    // width: 500px;
     float: right;
-    border:rgb(255, 255, 255) 3px solid;
+    border:rgb(255, 255, 255) 5px solid;
     display: block;
+    width: -webkit-fill-available;
     // -webkit-box-shadow: -1px 4px 26px 11px rgba(155, 170, 240, 0.75);
     // -moz-box-shadow: -1px 4px 26px 11px rgba(155, 170, 240, 0.75);
     // box-shadow: -1px 4px 26px 11px rgba(155, 170, 240, 0.75);
@@ -105,7 +119,7 @@ color: white;
 
 .home{
     display: flex;
-    justify-content: space-between;
+    // justify-content: flex-end;
 
 }
 
@@ -135,12 +149,12 @@ color: white;
 
 .name { 
     text-align: -webkit-center;
-    font-size: 3.8rem;
-
-    
+    font-size: 3.8rem; 
 }
 
-// .form-group{
-//     argin-top: 1rem;
-//     margin-bottom: 10px;
+//fav detele button
+// #button{
+//     float: right;
 // }
+  
+  

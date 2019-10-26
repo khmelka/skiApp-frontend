@@ -16,7 +16,8 @@ export class MainPage extends Component {
     state = {
         resorts: [],
         selectedResort: null,
-        activePage: "home"
+        activePage: "home",
+        favs: []
     }
 
     setSelectedResort = (resort) => {
@@ -25,9 +26,19 @@ export class MainPage extends Component {
      })
     }
 
+    addFav=(resort)=> {
+        if (!this.state.favs.includes(resort)){
+            this.setState({favs: [...this.state.favs, resort]})
+        }
+      }
+
+      removeFav=(resort)=>{
+        this.setState({favs: this.state.favs.filter(favresort=>favresort !== resort)})
+      }
+
     componentDidMount(){
 
-        fetch("http://localhost:3000/resorts")
+        fetch("https://blooming-everglades-24576.herokuapp.com/resorts")
         .then(resp=>resp.json())
         .then(resorts=> {
             // console.log("hifsdfsdii", resorts)
@@ -38,16 +49,16 @@ export class MainPage extends Component {
     }
 
     render() {
-        return (
-            
+        return ( 
             <div>
-                <Navbar />
+                {/* <Test /> */}
+                {/* <Navbar /> */}
                 <div className="home">
-                <HomeContainer resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} />
-                <Map resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} selectedResort={this.state.selectedResort} favs={this.state.favs} addFav={this.props.addFav}/>
+                    <HomeContainer resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} />
+                    <FavContainer favs={this.state.favs} removeFav={this.removeFav}  />
+                    <Map resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} selectedResort={this.state.selectedResort} favs={this.state.favs} addFav={this.addFav}/>
                 </div>
-              
-           </div>
+            </div>
         )
         
     }

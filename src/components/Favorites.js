@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
-import Map from './Map'
-import Navbar from './Navbar'
+
 
 function Favorites(props) {
 
-   
-        // console.log("favs", this.props.resortname)
+    const handleClick = (fav) => {
+        props.removeFav(fav)
+      }
+      
         return (
 
-            <div>
-                
-                <a href="#" class="list-group-item list-group-item-action">
-                    <p> <img src={props.logo} id="img"/> {props.resortname}  </p>
+            <div className="list-group-item list-group-item-action" style={{display: "block"}}>
+                 <a href="#">
+                    <div className="favs">{props.resortname}<button type="button" class="close" aria-label="Close" style={{}} onClick={()=>handleClick(props.fav)}>x</button></div> 
                 </a>
              </div>
         )
