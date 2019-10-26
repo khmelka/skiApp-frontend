@@ -1,15 +1,32 @@
-import React from 'react'
-import * as skiresorts from './skiresorts.json'
+import React, {useState, Component } from 'react'
+import Navbar from './Navbar'
 
 
-export default function Home() {
 
-   
+function Home(props) {
+
+    // console.log("NOOOO", this.props.resort)
+    
+    return (
+    
+    
+            <div  onClick={() => {
+              console.log("great", props.resort)
+              props.setSelectedResort(props.resort)
+          }}>
+    
         
-        return (
-            <div className="homeContainer">
-              <h1>HELOOOOO</h1>
-            </div>
-        )
-    }
+         
+         
+         <a href="#" class="list-group-item list-group-item-action">
+            <p>  {props.resortname} </p>
+                </a>
+        
+        
+                
+     </div>
+    )
+  
+}
 
+export default Home

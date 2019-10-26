@@ -7,73 +7,75 @@ import axios from 'axios'
 export default class SignUp extends Component {
 
     state={
-        first_name: "",
-        last_name: "",
+        name: "",
         email: "",
-        password: ""
-        // first_nameError: "",
-        // last_nameError: "",
-        // emailError: "",
-        // passwordError: "",
+        password: "",
+        nameError: "",
+        emailError: "",
+        passwordError: "",
 
     }
 
-    handleChange = event => {
+    handleUserInput = event => {
         console.log("hi", event.target.name)
         this.setState ({
             
             [event.target.name]: event.target.value
         })
-        // console.log(this.state)
+       
     }
 
     handleSubmit = event => {
         event.preventDefault()
-        // console.log(this.state)
-        axios 
+       
+        if (this.state.name === ""){
+
+            this.setState({
+            nameError: "Name is required"
+           })
+        }
+           
+
+        if (this.state.email === ""){
+            
+            this.setState({
+                emailError: "Email is required"
+            })
+        }
+
+        if (this.state.password === ""){
+            console.log(this.state)
+            
+            this.setState({
+                passwordError: "Password is required"
+            })
+        }
+
+    
+
+        else {
+
+            this.setState({
+                name: "",
+                email: "",
+                password: "",
+                nameError: "",
+                emailError: "",
+                passwordError: "",
+                
+            })
+
+            axios 
             .post("http://localhost:3000/users", this.state)
         }
 
-    //     if (this.state.first_name === ""){
-
-    //         this.setState({
-    //         first_nameError: "First name is required"
-    //        })
-    //     }
-           
-    //     if (this.state.last_name === ""){
-
-    //         this.setState({
-    //         last_nameError: "Last name is required"
-    //        })
-    //     }
-
-    //     if (this.state.email === ""){
             
-    //         this.setState({
-    //             emailError: "Email is required"
-    //         })
-    //     }
-
-    //     if (this.state.password === ""){
-    //         console.log(this.state)
-            
-    //         this.setState({
-    //             passwordError: "Email is required"
-    //         })
-    //     }
-
-    //     else {
-    //         axios 
-    //         .post("http://localhost:3000/users", this.state)
-    //     }
-
-            
-    // }
+    }
 
 
 
     render() {
+        const {nameError, emailError, passwordError} = this.state
         return (
                 <div className="signinMainContainer">
                     <div className="row">
@@ -82,24 +84,32 @@ export default class SignUp extends Component {
                             <form className="form-container" onSubmit={this.handleSubmit}>
 
                                 <div className="form-group">
-                                <label>First Name</label>
-                                    <input type="text" className="form-control" placeholder="First name" name="first_name" value={this.state.first_name} onChange={this.handleChange}/>
+                                <label>Name</label>
+                                    <input type="text" className="form-control" placeholder="First name" name="name" value={this.state.name} onChange={this.handleUserInput}/>
+                                    <div style={{ fontSize: 12, color: "red" }}>
+                                        {nameError}
                                     </div>
-                                    <div className="form-group">
-                                    <label>Last Name</label>
-                                        <input type="text" className="form-control" placeholder="Last name" name="last_name" value={this.state.last_name} onChange={this.handleChange}/>
-                                        </div>
+                                    </div>
+                                    
                                 <div className="form-group">
                                     <label for="exampleInputEmail1">Email</label>
-                                    <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={this.state.email} onChange={this.handleChange}/>
+                                    <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={this.state.email} onChange={this.handleUserInput}/>
+                                    <div style={{ fontSize: 12, color: "red" }}>
+                                        {emailError}
                                     </div>
+                                    </div>
+                                    
                                 <div className="form-group">
                                     <label>Password</label>
-                                    <input type="password" className="form-control" placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange}/>
+                                    <input type="password" className="form-control" placeholder="Password" name="password" value={this.state.password} onChange={this.handleUserInput}/>
+                                    <div style={{ fontSize: 12, color: "red" }}>
+                                        {passwordError}
                                     </div>
+                                    </div>
+                                   
                                 
                                 
-                                    <button type="submit" className="btn btn-success btn-success"id="but1">Signup</button>
+                                    <button type="submit" className="btn btn-success btn-success"id="but1"><Link to="/home">SignUp</Link></button>
                                     <button type="submit" className="btn btn-success btn-success"id="but2"><Link to="/login">Login</Link></button>
 
                                 </form>

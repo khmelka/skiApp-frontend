@@ -1,44 +1,112 @@
 .signinMainContainer {
     // text-align: center;
+    margin-top: 15rem;
 }
 
 body {
-    // background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SM3pJjTqisbn4nt8/world-map-background-cities-connections-4k-there-are-also-animated-glowing-round-connections-in-different-cities-on-the-map_r7c7qqkc_thumbnail-full01.png");
-    background-color:rgba(248, 206, 206, 0.7);
+    background-image: url("https://wallpapercave.com/wp/rtMojAI.jpg");
+    // background-color:rgba(248, 206, 206, 0.7);
 }
 
 .form-container {
     // border: 1px solid white;
-    color: white;
+    color: rgb(255, 251, 251);
     padding: 50px 60px;
-    margin-top: 25vh;
+    margin-top: 30px;
     -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
     box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
-
+    background: rgba(77, 77, 163, 0.253);
 }
 
-.map {
-    background: rgba(255, 255, 255, 0.26);
-    display: flex;
-    // justify-content: space-between;
-    // margin-top: 10rem;
-    // padding: 2rem;
-    border: yellow 5px solid;
-    // width: 100rem;
-    // margin: auto;
-    // margin-top: 10rem;
+//buttons
+.btn.btn-success.btn-success{
+    // background: white;
+    background-color: white;
+    color: black;
+}
+
+.btn.btn-info {
+    color:rgb(100, 85, 233);
+    background-color: white;
+}
+
+//navbar
+
+.navbar.navbar.navbar-light.bg-transparent.mt-1{
+
+    background-color: #8981f33a;
+    height: 2rem;
+    // border: rgb(255, 255, 255) 3px solid;
+    // display: flex;
+    margin-bottom: 0;
+    // display: flow-root;
+    display: inline-block;
     float: right;
-    height: 100vh;
-    // width: 100vh;
+    border: white 1px solid;
 }
+.navbar-brand{
+    // float: right;
+    color: white;
+    // font
+}
+
+//resort list
+.list-group{
+    display: grid;
+    display: inline-block;
+}
+
+.list-group-item.list-group-item-action{
+    background: rgba(107, 144, 246, 0.342);
+    height: 42px;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+}
+a.list-group-item.list-group-item-action:hover{
+background-color: rgba(53, 65, 226, 0.205);
+color: white;
+}
+
+#img{
+    width: 5rem
+    // padding-righmar: 2rem;
+}
+
+// 
+.test{
+    // margin: auto;
+    float: right;
+}
+
+//map
+.map{
+    margin: auto;
+    // padding-bottom: 30rem;
+}
+
+// .map2{
+//     // margin: auto;
+//     // padding-bottom: 40rem;
+//     display: flex;
+//     padding-left: 30rem;
+// }
 
 .style {
-    // height: 100vh;
-    width: 90rem;
-    
-    border:rgb(235, 58, 58) 3px solid;
+    height: 80rem;
+    width: 80em;
+    float: right;
+    border:rgb(255, 255, 255) 3px solid;
     display: block;
+    // -webkit-box-shadow: -1px 4px 26px 11px rgba(155, 170, 240, 0.75);
+    // -moz-box-shadow: -1px 4px 26px 11px rgba(155, 170, 240, 0.75);
+    // box-shadow: -1px 4px 26px 11px rgba(155, 170, 240, 0.75);
+}
+
+.home{
+    display: flex;
+    justify-content: space-between;
+
 }
 
 #logo{
@@ -48,4 +116,31 @@ body {
 
 .homeContainer{
     border: blue 2px solid;
+    margin: auto;
 }
+
+// .homeMap{
+//     justify-content: space-between;
+//     border: black;
+   
+// }
+
+.mainname{
+    float: center;
+    color: white;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+
+}
+
+.name { 
+    text-align: -webkit-center;
+    font-size: 3.8rem;
+
+    
+}
+
+// .form-group{
+//     argin-top: 1rem;
+//     margin-bottom: 10px;
+// }
