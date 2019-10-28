@@ -26,15 +26,15 @@ export class MainPage extends Component {
      })
     }
 
-    addFav=(resort)=> {
-        if (!this.state.favs.includes(resort)){
-            this.setState({favs: [...this.state.favs, resort]})
-        }
-      }
+    // addFav=(resort)=> {
+    //     if (!this.state.favs.includes(resort)){
+    //         this.setState({favs: [...this.state.favs, resort]})
+    //     }
+    //   }
 
-      removeFav=(resort)=>{
-        this.setState({favs: this.state.favs.filter(favresort=>favresort !== resort)})
-      }
+    //   removeFav=(resort)=>{
+    //     this.setState({favs: this.state.favs.filter(favresort=>favresort !== resort)})
+    //   }
 
     componentDidMount(){
 
@@ -55,8 +55,8 @@ export class MainPage extends Component {
                 {/* <Navbar /> */}
                 <div className="home">
                     <HomeContainer resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} />
-                    <FavContainer favs={this.state.favs} removeFav={this.removeFav}  />
-                    <Map resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} selectedResort={this.state.selectedResort} favs={this.state.favs} addFav={this.addFav}/>
+                    {/* <FavContainer favs={this.state.favs} removeFav={this.removeFav}  /> */}
+                    <Map resorts={this.state.resorts} setSelectedResort={this.setSelectedResort} selectedResort={this.state.selectedResort} favs={this.state.favs} addFav={this.props.addFav}/>
                 </div>
             </div>
         )

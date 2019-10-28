@@ -56,6 +56,7 @@ function GMap(props) {
                                                 <p>Annual Snowfall: {props.selectedResort.annualsnow}</p>
                                                 <p>PAF Score: {props.selectedResort.score}%</p>
                                                 <p>Number of Lifts: {props.selectedResort.lifts}</p>
+                                                {/* <button type = "submit" >coming soon</button> */}
                                                 <button type="submit" className="btn btn-info" id="but1" onClick={()=>props.addFav(props.selectedResort)}>Add to Favs</button> 
                                                 {/* <Link className="link" to="/favorites" onClick={()=>props.addFav(props.selectedResort)}> <p >Plan a Trip</p></Link> */}
                                             </div>

@@ -7,6 +7,7 @@ export default function HomeContainer ({resorts, setSelectedResort}){
                         {resorts.map((resort)=> {
                                 return  <Home resort={resort} setSelectedResort={setSelectedResort} resortname={resort.resortname} logo={resort.logo} score={resort.score} latitude={resort.latitude} longitude={resort.longitude}/>   
                         })}
-                </ul>        )
+                </ul>        
+        )
     
 }

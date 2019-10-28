@@ -17,12 +17,16 @@ class App extends Component {
     favs: []
   }
 
-  // addFav=(resort)=> {
-  //   console.log("MAPS", resort)
-  //   if (!this.state.favs.includes(resort)){
-  //       this.setState({favs: [...this.state.favs, resort]})
-  //   }
-  // }
+  addFav=(resort)=> {
+    console.log("MAPS", resort)
+    if (!this.state.favs.includes(resort)){
+        this.setState({favs: [...this.state.favs, resort]})
+    }
+  }
+
+  removeFav=(resort)=>{
+    this.setState({favs: this.state.favs.filter(favresort=>favresort !== resort)})
+  }
 
   render() {
       return (
@@ -32,9 +36,9 @@ class App extends Component {
             <Switch>
               <Route path="/login" component={Login} />
                 <Route exact path="/" component={Signup} />
-                {/* <Route path="/home" render={(...props) => <MainPage addFav={this.addFav}/>} />  */}
-                <Route path="/home" component ={MainPage} />
-                {/* <Route path="/favorites"  render={(...props) => <FavContainer favs={this.state.favs} addFav={this.addFav}/>}/> */}
+                <Route path="/home" render={(...props) => <MainPage addFav={this.addFav}/>} /> 
+                {/* <Route path="/home" component ={MainPage} /> */}
+                <Route path="/favorites"  render={(...props) => <FavContainer favs={this.state.favs} removeFav= {this.removeFav}/>}/>
               </Switch>
             </Router>
         </div>
