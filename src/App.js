@@ -34,9 +34,9 @@ class App extends Component {
           <Router>
             <Navbar />
             <Switch>
-              <Route path="/login" component={Login} />
-                <Route exact path="/" component={Signup} />
-                <Route path="/home" render={(...props) => <MainPage addFav={this.addFav}/>} /> 
+              {/* <Route path="/login" component={Login} />
+                <Route exact path="/" component={Signup} /> */}
+                <Route path="/" render={(...props) => <MainPage addFav={this.addFav}/>} /> 
                 {/* <Route path="/home" component ={MainPage} /> */}
                 <Route path="/favorites"  render={(...props) => <FavContainer favs={this.state.favs} removeFav= {this.removeFav}/>}/>
               </Switch>

@@ -63,8 +63,8 @@ componentDidMount(){
         const {date, notes} = this.state
         return (
           <div>
-            {this.props.resortname}
             <form className = "tripContainer" onSubmit={this.tripsPost}>
+            {this.props.resortname}
                <div className="form-group row">
                    <div class="col-sm-10">
                    <input type="text" readonly class="form-control-plaintext" 
@@ -83,7 +83,7 @@ componentDidMount(){
                   </div>
                   <div className="control">
                    <button type="submit" className="button is-primary is-medium">
-                      Add Trip
+                      Add Trip Option Coming Soon!
                    </button></div>
             </form>
           

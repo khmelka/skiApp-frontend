@@ -18,7 +18,7 @@ export default class Navbar extends Component {
             <div className='navbar navbar-light bg-transparent mt-1'>
                     <Link className="link" to="/home"> <p className="navbar-brand">Resorts</p></Link>
                     {/* <div class="collapse navbar-collapse" id="navbarText"> */}
-                    <Link className="link" to="/favorites"> <p className="navbar-brand">Trips</p></Link>
+                    {/* <Link className="link" to="/favorites"> <p className="navbar-brand">Trips</p></Link> */}
                    
                     {/* <div className="test">
                     <Link className="link" to="/login"> <p className="resortTitle">Sign Out</p></Link>
