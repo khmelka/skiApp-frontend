@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Map from './components/Map'
@@ -19,21 +19,27 @@ class App extends Component {
 
   addFav=(resort)=> {
     console.log("MAPS", resort)
-    console.log("lalal", this.state)
     if (!this.state.favs.includes(resort)){
         this.setState({favs: [...this.state.favs, resort]})
     }
+  }
+
+  removeFav=(resort)=>{
+    this.setState({favs: this.state.favs.filter(favresort=>favresort !== resort)})
   }
 
   render() {
       return (
         <div>
           <Router>
-              <Route path="/login" component={Login} />
-                <Route exact path="/" component={Signup} />
-                <Route path="/home" render={(...props) => <MainPage addFav={this.addFav}/>} /> 
-                <Route path="/favorites"  render={(...props) => <FavContainer favs={this.state.favs}/>}/>
-            
+            <Navbar />
+            <Switch>
+              {/* <Route path="/login" component={Login} />
+                <Route exact path="/" component={Signup} /> */}
+                <Route path="/" render={(...props) => <MainPage addFav={this.addFav}/>} /> 
+                {/* <Route path="/home" component ={MainPage} /> */}
+                <Route path="/favorites"  render={(...props) => <FavContainer favs={this.state.favs} removeFav= {this.removeFav}/>}/>
+              </Switch>
             </Router>
         </div>
       );

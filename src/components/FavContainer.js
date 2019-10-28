@@ -1,21 +1,18 @@
 import React, { Component } from 'react'
 import Favorites from './Favorites'
-import Navbar from './Navbar'
-import Map from './Map'
 
-export default function FavContainer({favs}){
 
-    
-        return (
-            <div>
-            
-                    <ul class="list-group">
-                                {favs.map((fav)=> {
-                                        return  <Favorites fav={fav} resortname={fav.resortname} logo={fav.logo} />   
-                                    })}
-                                </ul>
-                    
-            </div>
-        )
-    
+export default class FavContainer extends Component {
+
+    render(){
+    return (
+        <div>
+            <ul className="list-group">
+                {this.props.favs.map((fav)=> {
+                    return  <Favorites fav={fav} resortname={fav.resortname} logo={fav.logo} removeFav={this.removeFav}/>   
+                    })}
+                </ul>           
+        </div>
+     )   
+  }
 }
